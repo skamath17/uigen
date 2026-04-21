@@ -30,6 +30,14 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Project setup
+        run: |
+          # Add any setup steps here, such as installing dependencies or setting up the environment
+          echo "Setting up project environment..."
+          # Example: npm install
+          npm run setup
+          npm run dev:daemon
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
@@ -39,6 +47,32 @@ jobs:
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
             actions: read
+          
+          custom_instructions: |
+            # You can provide custom instructions to Claude here. This will override the default behavior of performing the instructions specified in the comment that tagged it.
+            # For example, you could specify a custom prompt or additional arguments for Claude.
+            The project is already setup with all dependencies installed. The server is already running at localhost:3000. Logs from it are being written to logs.txt.
+            If needed, you can query the db with the 'sqlite3' cli. If needed, use the mcp__playwright set of tools to launch the browser and interact with the UI.
+            
+          mcp_config: |
+            # If you want to use the mcp tools, you can specify the configuration for the mcp tools here. This is optional and only needed if you want to use the mcp tools.
+            # For example, you could specify the configuration for the mcp__playwright tool here.
+            mcp__playwright:
+              {
+                "mcpServers": {
+                  "playwright": {
+                    "command": "npx",
+                    "args": [
+                      "@playwright/mcp@latest",
+                      "--allowed-origins",
+                      "http://localhost:3000;cdn.tailwindcss.com;esm.sh"
+                    ]
+                    }
+                  }
+                }
+    
+          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."
+
 
           # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
           # prompt: 'Update the pull request description to include a summary of changes.'
