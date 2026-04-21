@@ -81,7 +81,7 @@ export function MainContent({ user, project }: MainContentProps) {
                           : "text-neutral-600"
                       )}
                     >
-                      Cod
+                      Code
                     </button>
                   </div>
                   <HeaderActions user={user} projectId={project?.id} />
