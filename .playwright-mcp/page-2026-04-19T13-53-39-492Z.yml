@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "React Component Generator" [level=1] [ref=e7]
+      - generic [ref=e9]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e58]: Create a user profile card component
+            - img [ref=e61]
+          - generic [ref=e77]:
+            - img [ref=e80]
+            - generic [ref=e85]:
+              - generic [ref=e88]: Creating App.jsx
+              - separator [ref=e89]
+              - generic [ref=e92]: Creating UserProfileCard.jsx
+              - separator [ref=e93]
+              - generic [ref=e94]:
+                - paragraph [ref=e95]: "Done! Created a user profile card component with:"
+                - list [ref=e96]:
+                  - listitem [ref=e97]: Avatar image with border
+                  - listitem [ref=e98]: Name, title, and location
+                  - listitem [ref=e99]: Bio section
+                  - listitem [ref=e100]: Followers/following stats
+                  - listitem [ref=e101]: Follow and Message action buttons
+                  - listitem [ref=e102]: Gradient header background
+                  - listitem [ref=e103]: Hover effects and smooth transitions
+                - paragraph [ref=e104]: The component accepts customizable props for all content.
+        - generic [ref=e20]:
+          - textbox "Describe the React component you want to create..." [ref=e21]
+          - button [disabled] [ref=e22]:
+            - img [ref=e23]
+    - separator [ref=e26]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - tablist [ref=e31]:
+          - tab "Preview" [selected] [ref=e32]
+          - tab "Code" [ref=e33]
+        - generic [ref=e34]:
+          - button "Sign In" [ref=e35]
+          - button "Sign Up" [ref=e36]
+      - iframe [ref=e105]:
+        - generic [ref=f2e6]:
+          - img "Sarah Anderson" [ref=f2e8]
+          - heading "Sarah Anderson" [level=2] [ref=f2e9]
+          - paragraph [ref=f2e10]: Product Designer
+          - generic [ref=f2e11]:
+            - img [ref=f2e12]
+            - generic [ref=f2e15]: San Francisco, CA
+          - paragraph [ref=f2e16]: Creating beautiful and intuitive user experiences
+          - generic [ref=f2e17]:
+            - generic [ref=f2e18]:
+              - paragraph [ref=f2e19]: 2.4K
+              - paragraph [ref=f2e20]: Followers
+            - generic [ref=f2e21]:
+              - paragraph [ref=f2e22]: 1.2K
+              - paragraph [ref=f2e23]: Following
+          - generic [ref=f2e24]:
+            - button "Follow" [ref=f2e25] [cursor=pointer]:
+              - img [ref=f2e26]
+              - text: Follow
+            - button "Message" [ref=f2e28] [cursor=pointer]:
+              - img [ref=f2e29]
+              - text: Message
+  - alert [ref=e48]

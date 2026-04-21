@@ -1,0 +1,128 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "React Component Generator" [level=1] [ref=e7]
+      - generic [ref=e9]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e58]: Create a user profile card component
+            - img [ref=e61]
+          - generic [ref=e77]:
+            - img [ref=e80]
+            - generic [ref=e85]:
+              - generic [ref=e88]: Creating App.jsx
+              - separator [ref=e89]
+              - generic [ref=e92]: Creating UserProfileCard.jsx
+              - separator [ref=e93]
+              - generic [ref=e94]:
+                - paragraph [ref=e95]: "Done! Created a user profile card component with:"
+                - list [ref=e96]:
+                  - listitem [ref=e97]: Avatar image with border
+                  - listitem [ref=e98]: Name, title, and location
+                  - listitem [ref=e99]: Bio section
+                  - listitem [ref=e100]: Followers/following stats
+                  - listitem [ref=e101]: Follow and Message action buttons
+                  - listitem [ref=e102]: Gradient header background
+                  - listitem [ref=e103]: Hover effects and smooth transitions
+                - paragraph [ref=e104]: The component accepts customizable props for all content.
+        - generic [ref=e20]:
+          - textbox "Describe the React component you want to create..." [ref=e21]
+          - button [disabled] [ref=e22]:
+            - img [ref=e23]
+    - separator [ref=e26]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - tablist [ref=e31]:
+          - tab "Preview" [ref=e32]
+          - tab "Code" [selected] [ref=e33]
+        - generic [ref=e34]:
+          - button "Sign In" [ref=e35]
+          - button "Sign Up" [ref=e36]
+      - generic [ref=e106]:
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114] [cursor=pointer]:
+              - img [ref=e115]
+              - img [ref=e117]
+              - generic [ref=e119]: components
+            - generic [ref=e122] [cursor=pointer]:
+              - img [ref=e123]
+              - generic [ref=e128]: UserProfileCard.jsx
+          - generic [ref=e130] [cursor=pointer]:
+            - img [ref=e131]
+            - generic [ref=e136]: App.jsx
+        - separator [ref=e137]
+        - code [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e145]:
+              - generic [ref=e328]: "1"
+              - generic [ref=e152]: "2"
+              - generic [ref=e330]:
+                - generic [ref=e331] [cursor=pointer]: 
+                - generic [ref=e332]: "3"
+              - generic [ref=e334]: "4"
+              - generic [ref=e336]: "5"
+              - generic [ref=e338]: "6"
+              - generic [ref=e168]: "7"
+              - generic [ref=e170]: "8"
+              - generic [ref=e172]: "9"
+              - generic [ref=e175]: "10"
+              - generic [ref=e339]:
+                - generic [ref=e340] [cursor=pointer]: 
+                - generic [ref=e341]: "11"
+              - generic [ref=e342]:
+                - generic [ref=e343] [cursor=pointer]: 
+                - generic [ref=e344]: "12"
+              - generic [ref=e345]:
+                - generic [ref=e346] [cursor=pointer]: 
+                - generic [ref=e347]: "13"
+              - generic [ref=e355]: "14"
+              - generic [ref=e357]: "15"
+              - generic [ref=e360]: "16"
+              - generic [ref=e362]: "17"
+              - generic [ref=e363]:
+                - generic [ref=e364] [cursor=pointer]: 
+                - generic [ref=e365]: "18"
+              - generic [ref=e367]: "19"
+              - generic [ref=e368]:
+                - generic [ref=e369] [cursor=pointer]: 
+                - generic [ref=e370]: "20"
+              - generic [ref=e372]:
+                - generic [ref=e373] [cursor=pointer]: 
+                - generic [ref=e374]: "21"
+              - generic [ref=e376]: "22"
+            - generic [ref=e277]:
+              - generic [ref=e465]: "import { MapPin, Heart, MessageCircle } from"
+              - generic [ref=e467]: "'lucide-react';"
+              - generic [ref=e469]: "export default function UserProfileCard({"
+              - generic [ref=e471]: name = "John Doe",
+              - generic [ref=e473]: title = "Software Engineer",
+              - generic [ref=e475]: bio = "Passionate about building great
+              - generic [ref=e477]: avatar = "https://images.unsplash.com/
+              - generic [ref=e479]: location = "New York, NY",
+              - generic [ref=e481]: followers = "1.5K",
+              - generic [ref=e483]: following = "800",
+              - generic [ref=e485]: "}) {"
+              - generic [ref=e487]: return (
+              - generic [ref=e489]: <div className="w-full max-w-sm bg-white
+              - generic [ref=e491]: products",
+              - generic [ref=e493]: photo-1507003211169-0a1dd7228f2d?w=400&h=400&
+              - generic [ref=e495]: fit=crop",
+              - generic [ref=e497]: rounded-2xl shadow-lg overflow-hidden
+              - generic [ref=e499]: hover:shadow-2xl transition-shadow
+              - generic [ref=e501]: duration-300">
+              - generic [ref=e503]: "{/* Header Background */}"
+              - generic [ref=e505]: <div className="h-24 bg-gradient-to-r
+              - generic [ref=e507]: from-blue-500 to-indigo-600"></div>
+              - generic [ref=e510]: "{/* Profile Content */}"
+              - generic [ref=e512]: <div className="px-6 pb-6">
+              - generic [ref=e514]: "{/* Avatar */}"
+              - generic [ref=e516]: <div className="flex justify-center
+              - generic [ref=e518]: "-mt-16 mb-4\">"
+              - generic [ref=e520]: <img
+              - generic [ref=e522]: "src={avatar}"
+            - textbox "Editor content" [ref=e325]: "Message </button> </div> </div> </div> ); }"
+  - alert [ref=e48]
+  - generic [ref=e326]:
+    - alert
+    - alert
