@@ -35,8 +35,11 @@ jobs:
           # Add any setup steps here, such as installing dependencies or setting up the environment
           echo "Setting up project environment..."
           # Example: npm install
+          npm install
+          npx playwright install --with-deps chromium
           npm run setup
           npm run dev:daemon
+          sleep 5
 
       - name: Run Claude Code
         id: claude
@@ -51,27 +54,22 @@ jobs:
           custom_instructions: |
             # You can provide custom instructions to Claude here. This will override the default behavior of performing the instructions specified in the comment that tagged it.
             # For example, you could specify a custom prompt or additional arguments for Claude.
-            The project is already setup with all dependencies installed. The server is already running at localhost:3000. Logs from it are being written to logs.txt.
-            If needed, you can query the db with the 'sqlite3' cli. If needed, use the mcp__playwright set of tools to launch the browser and interact with the UI.
+            The project is set up. Server runs at localhost:3000. Logs in logs.txt.
+            IMPORTANT: You have access to a real browser via mcp__playwright tools.
+            Always use the browser to visually verify UI behavior — do not just do static code analysis.
+            Use mcp__playwright__browser_navigate to open localhost:3000, then interact with the UI.
             
           mcp_config: |
-            # If you want to use the mcp tools, you can specify the configuration for the mcp tools here. This is optional and only needed if you want to use the mcp tools.
-            # For example, you could specify the configuration for the mcp__playwright tool here.
-            mcp__playwright:
-              {
-                "mcpServers": {
-                  "playwright": {
-                    "command": "npx",
-                    "args": [
-                      "@playwright/mcp@latest",
-                      "--allowed-origins",
-                      "http://localhost:3000;cdn.tailwindcss.com;esm.sh"
-                    ]
-                    }
-                  }
+            {
+              "mcpServers": {
+                "playwright": {
+                  "command": "npx",
+                  "args": ["@playwright/mcp@latest", "--allowed-origins", "http://localhost:3000;cdn.tailwindcss.com;esm.sh"]
                 }
+              }
+            }
     
-          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click"
+          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),Bash(sleep:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,mcp__playwright__browser_navigate,mcp__playwright__browser_type,mcp__playwright__browser_wait_for,mcp__playwright__browser_scroll"
 
 
           # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
