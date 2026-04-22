@@ -69,8 +69,8 @@ jobs:
               }
             }
     
-    
-          allowed_tools: "Bash(npm run *),Bash(npx *),Bash(sqlite3 *),Bash(sleep *),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,mcp__playwright__browser_navigate,mcp__playwright__browser_type,mcp__playwright__browser_wait_for,mcp__playwright__browser_scroll"
+
+          allowed_tools: "Bash(npm run dev),Bash(npm run test),Bash(npm run setup),Bash(npm run dev:daemon),Bash(npm install),Bash(npx *),Bash(sqlite3 *),Bash(sleep *),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,mcp__playwright__browser_navigate,mcp__playwright__browser_type,mcp__playwright__browser_wait_for,mcp__playwright__browser_scroll"
 
 
           # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
