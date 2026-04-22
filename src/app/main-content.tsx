@@ -62,17 +62,6 @@ export function MainContent({ user, project }: MainContentProps) {
                 <div className="h-14 border-b border-neutral-200/60 px-6 flex items-center justify-between bg-neutral-50/50">
                   <div className="bg-white/60 border border-neutral-200/60 p-0.5 h-9 shadow-sm rounded-md flex items-center">
                     <button
-                      onClick={() => setActiveView("preview")}
-                      className={cn(
-                        "px-4 py-1.5 text-sm font-medium transition-all rounded-sm",
-                        activeView === "preview"
-                          ? "bg-white text-neutral-900 shadow-sm"
-                          : "text-neutral-600"
-                      )}
-                    >
-                      Preview
-                    </button>
-                    <button
                       onClick={() => setActiveView("code")}
                       className={cn(
                         "px-4 py-1.5 text-sm font-medium transition-all rounded-sm",
@@ -82,6 +71,17 @@ export function MainContent({ user, project }: MainContentProps) {
                       )}
                     >
                       Code
+                    </button>
+                    <button
+                      onClick={() => setActiveView("preview")}
+                      className={cn(
+                        "px-4 py-1.5 text-sm font-medium transition-all rounded-sm",
+                        activeView === "preview"
+                          ? "bg-white text-neutral-900 shadow-sm"
+                          : "text-neutral-600"
+                      )}
+                    >
+                      Preview
                     </button>
                   </div>
                   <HeaderActions user={user} projectId={project?.id} />
